@@ -1,0 +1,13 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\runapp]
+@="RunApp Protocol"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\runapp\shell]
+@="open"
+
+[HKEY_CLASSES_ROOT\runapp\shell\open]
+
+[HKEY_CLASSES_ROOT\runapp\shell\open\command]
+@="%PATH_TO%\\RunApp.exe \"%1\""
