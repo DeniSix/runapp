@@ -85,22 +85,31 @@ namespace RunApp
             // Resolve the target app name
             string target = Environment.ExpandEnvironmentVariables(node.SelectSingleNode("@target").Value);
 
+#if DEBUG
+            string placeholders = "";
+#endif
             string appArgs = "";
             if (node.SelectSingleNode("@args") != null)
             {
                 appArgs = node.SelectSingleNode("@args").Value;
-                var reg = new Regex(@"\{(\S+)\}", RegexOptions.IgnoreCase);
+                var reg = new Regex(@"\{(\S+?)\}", RegexOptions.IgnoreCase);
                 var mc = reg.Matches(appArgs);
                 foreach (Match mat in mc)
                 {
                     var name = mat.Groups[1].Value;
                     appArgs = appArgs.Replace(String.Format("{{{0}}}", name), query.Get(name));
+#if DEBUG
+                    placeholders += name + ", ";
+#endif
                 }
             }
 
             // Pull the command line args for the target app if they exist
             string procargs = Environment.ExpandEnvironmentVariables(appArgs);
-
+#if DEBUG
+            MessageBox.Show(String.Format("Full URI: {0}\nApp name: {1}\nQuery: {2}\nTarget: {3}\nArgs: {4}\nPlaceholders: {5}",
+                myUri, app, query, target, appArgs, placeholders));
+#endif
             // Start the application
             Process.Start(target, procargs);
         }

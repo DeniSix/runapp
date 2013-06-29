@@ -1,4 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <RunApp>
-	<App key="rubymine" target="%rubymine%\bin\rubymine.exe" args="-l {line} {file}" />
+  <!-- runapp://rubymine?file=c:/test.rb&line=24 -->
+  <App key="rubymine" target="%rubymine%\bin\rubymine.exe" args="-l {line} {file}" />
+  <!-- runapp://sublime?file=c:/test.md&line=24&column=5 -->
+  <App key="sublime" target="%sublime%\sublime_text.exe" args="{file}:{line}:{column}" />
 </RunApp>
