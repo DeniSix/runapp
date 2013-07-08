@@ -40,3 +40,5 @@ For example you need to add next line to your's `development.rb` for integrating
 ```ruby
 BetterErrors.editor = 'runapp://rubymine?file=%{file}&line=%{line}' if defined? BetterErrors
 ```
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/denisix/runapp/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
