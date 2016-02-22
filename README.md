@@ -17,7 +17,7 @@ Apply the reg file and it's done.
 
 ## Configuration
 
-Now you must define your own app in config file `RegisteredApps.xml` as follows:
+Now you must define your own app in config file `runapp.xml` as follows:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?> 

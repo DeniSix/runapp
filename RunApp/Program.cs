@@ -37,7 +37,8 @@ namespace RunApp
         const string APP_TITLE = "RunApp URL Protocol Handler";
 
         // Path to the configuration file
-        static string APP_CONFIG = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "RegisteredApps.xml");
+        static string APP_PATH = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+        static string APP_CONFIG = Path.Combine(APP_PATH, "runapp.xml");
 
         static void Main(string[] args)
         {
