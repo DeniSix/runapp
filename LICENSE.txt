@@ -1,4 +1,4 @@
-Copyright (c) 2013 Denis Shemanaev
+Copyright (c) 2013-2016 Denis Shemanaev
 
 MIT License
 
