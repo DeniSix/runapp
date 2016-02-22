@@ -5,15 +5,10 @@ e.g. i'm using it with RubyMine and [Better errors](https://github.com/charlieso
 
 ## Installation
 
-Grab archive from [here](https://dl.dropboxusercontent.com/u/8021778/RunApp.zip) and unpack it anywhere.
-Then you need to edit `install.reg` to point it to your RunApp installation:
+Grab archive from [releases page](https://github.com/DeniSix/runapp/releases) and unpack it anywhere.
+Then just run `RunApp.exe` and it will ask you for Installation.
 
-```
-[HKEY_CLASSES_ROOT\runapp\shell\open\command]
-@="%PATH_TO_YOUR_INSTALLATION_OF%\\RunApp.exe \"%1\""
-```
-
-Apply the reg file and it's done.
+To uninstall start `RunApp.exe /uninstall`.
 
 ## Configuration
 
